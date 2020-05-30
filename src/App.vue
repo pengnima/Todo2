@@ -1,32 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <todo />
   </div>
 </template>
 
+<script>
+import Todo from "./views/Todo.vue";
+export default {
+  components: {
+    Todo
+  }
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+body,
+html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
-
-#nav {
-  padding: 30px;
+* {
+  box-sizing: border-box;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+input,
+input:focus {
+  background: none;
+  outline: none;
+  border: none;
 }
 </style>
